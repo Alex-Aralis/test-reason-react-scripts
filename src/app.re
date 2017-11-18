@@ -16,6 +16,8 @@ type state = {
 
 let component = ReasonReact.reducerComponent("App");
 
+
+
 let make = (~message, ~count=0, _children) => {
   ...component,
   reducer: (action, state) => switch action {
@@ -53,5 +55,6 @@ let make = (~message, ~count=0, _children) => {
         (ReasonReact.stringToElement(string_of_int(self.state.count)))
       </p>
 
+      <Cell enabled=true />
     </div>
 };
